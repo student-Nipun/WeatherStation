@@ -19,7 +19,7 @@ function fetch_data() {
       } else {
         let cityTemp = data.main.temp;
         console.log(cityTemp);
-        let icon = data["weather"]["0"]["icon"];
+        let icon = data.weather[0].icon;
         let icon_url = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
         document.getElementById("result").innerHTML =
           `<img src=${icon_url}>` +
